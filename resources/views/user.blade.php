@@ -24,28 +24,30 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
+
             @if (!empty($response))
 
-
+@foreach($response['data'] as $res)
+    <tr>
                 <td>
-                  {{$response->name  }}
+                  {!! $res['name'] !!}
                 </td>
                 <td>
-                  {{$response->nid  }}
+                  {{$res['nid']  }}
                 </td>
                 <td>
-                  {{$response->no_Birthday  }}
+                  {{$res['no_Birthday']  }}
                 </td>
                 <td>
-                  {{$responses->phone  }}
+                  {{$res['phone']  }}
                 </td>
                 <td>
-                  {{$responses->email  }}
+                  {{$res['email']  }}
                 </td>
-
+    </tr>
+@endforeach
             @endif
-        </tr>
+
 
         </tbody>
     </table>

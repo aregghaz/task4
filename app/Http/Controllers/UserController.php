@@ -54,7 +54,7 @@ class UserController extends Controller
         }
 
         $data = Array();
-    $data['response'] = $response['data'];
+    $data['response'] = $response;
     $data['status'] = $status;
 
     return view('user', $data);
